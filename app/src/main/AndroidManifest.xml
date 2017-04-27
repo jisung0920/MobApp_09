@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SpinnerActivity"></activity>
+        <activity android:name=".SpinnerActivity" />
+        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>

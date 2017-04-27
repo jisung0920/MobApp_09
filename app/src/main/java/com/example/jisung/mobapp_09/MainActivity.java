@@ -13,7 +13,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void onClick(View v){
+        if(v.getId()==R.id.b1){
         Intent intent = new Intent(this,SpinnerActivity.class);
-        startActivity(intent);
+        startActivity(intent);}
+        else {
+            Intent intent = new Intent(this, Main2Activity.class);
+            startActivity(intent);
+        }
     }
 }
