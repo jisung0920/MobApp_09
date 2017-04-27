@@ -9,7 +9,6 @@
     <Spinner
         android:layout_margin="10dp"
         android:padding="5dp"
-        android:entries="@array/fruit"
         android:background="#7f94de"
         android:id="@+id/spinner"
         android:layout_width="match_parent"
