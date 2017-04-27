@@ -2,12 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context="com.example.jisung.mobapp_09.Main2Activity">
 
     <GridView
+        android:layout_weight="1"
         android:verticalSpacing="10dp"
         android:horizontalSpacing="10dp"
         android:numColumns="3"
@@ -15,4 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </GridView>
+    <com.example.jisung.mobapp_09.AddFruit
+        android:id="@+id/w1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></com.example.jisung.mobapp_09.AddFruit>
 </LinearLayout>

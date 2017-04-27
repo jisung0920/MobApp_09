@@ -41,13 +41,16 @@ public class GridAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+//        if(convertView==null)
+//            convertView = LayoutInflater.from(context).inflate(R.layout.griditem,null);
+//        //여기서 이벤트를 받는다.
+//        final TextView tv = (TextView)convertView.findViewById(R.id.tv1);
+//        final ImageView img = (ImageView)convertView.findViewById(R.id.img1);
+//        tv.setText(fruit.get(position).name);
+//        img.setImageResource(fruit.get(position).imgno);
         if(convertView==null)
-            convertView = LayoutInflater.from(context).inflate(R.layout.griditem,null);
-        //여기서 이벤트를 받는다.
-        final TextView tv = (TextView)convertView.findViewById(R.id.tv1);
-        final ImageView img = (ImageView)convertView.findViewById(R.id.img1);
-        tv.setText(fruit.get(position).name);
-        img.setImageResource(fruit.get(position).imgno);
+            convertView=new GridItem(context);
+        ((GridItem)convertView).setData(fruit.get(position));
         return convertView;
     }
 }
