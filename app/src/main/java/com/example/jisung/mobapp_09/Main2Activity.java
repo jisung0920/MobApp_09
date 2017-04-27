@@ -43,30 +43,30 @@ public class Main2Activity extends AppCompatActivity {
         adapter= new GridAdapter(this,fruit);
         gridView.setAdapter(adapter);
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.d("abc","abac");
-                Toast.makeText(Main2Activity.this, "이거 오ㅑ ㅏ아ㅣㅓㄴ어리ㅏ", Toast.LENGTH_SHORT).show();
-            }
-        });
 //        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 //                Log.d("abc","abac");
 //                Toast.makeText(Main2Activity.this, "이거 오ㅑ ㅏ아ㅣㅓㄴ어리ㅏ", Toast.LENGTH_SHORT).show();
-//                addFruit.buttonChange();
-//                Fposition = position;
-//                Fruit fu = (Fruit)adapter.getItem(position);
-//                AutoCompleteTextView t1 = (AutoCompleteTextView)findViewById(R.id.f_name);
-//                EditText t2 = (EditText)findViewById(R.id.f_price);
-//                ImageView i1 = (ImageView)findViewById(R.id.image1);
-//                t1.setText(fu.name);
-//                t2.setText(fu.price);
-//                i1.setImageResource(imglist[fu.imgno]);
-//
 //            }
 //        });
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d("abc","abac");
+                Toast.makeText(Main2Activity.this, "이거 오ㅑ ㅏ아ㅣㅓㄴ어리ㅏ", Toast.LENGTH_SHORT).show();
+                addFruit.buttonChange();
+                Fposition = position;
+                Fruit fu = (Fruit)adapter.getItem(position);
+                AutoCompleteTextView t1 = (AutoCompleteTextView)findViewById(R.id.f_name);
+                EditText t2 = (EditText)findViewById(R.id.f_price);
+                ImageView i1 = (ImageView)findViewById(R.id.image1);
+                t1.setText(fu.name);
+                t2.setText(fu.price);
+                i1.setImageResource(imglist[fu.imgno]);
+
+            }
+        });
 
         auto = new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,fruitName);
         AutoCompleteTextView auT = (AutoCompleteTextView)findViewById(R.id.f_name);
