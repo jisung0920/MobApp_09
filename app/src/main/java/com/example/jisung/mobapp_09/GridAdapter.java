@@ -5,9 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.CheckBox;
-import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 
 import java.util.ArrayList;
 
@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class GridAdapter extends BaseAdapter {
     Context context;
     ArrayList<Fruit> fruit;
+    int check =0;
 
     public GridAdapter(Context context, ArrayList<Fruit> fruit) {
         this.context = context;
@@ -42,15 +43,32 @@ public class GridAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 //        if(convertView==null)
-//            convertView = LayoutInflater.from(context).inflate(R.layout.griditem,null);
+//        LayoutInflater.from(context).inflate(R.layout.griditem,null);
 //        //여기서 이벤트를 받는다.
 //        final TextView tv = (TextView)convertView.findViewById(R.id.tv1);
 //        final ImageView img = (ImageView)convertView.findViewById(R.id.img1);
 //        tv.setText(fruit.get(position).name);
 //        img.setImageResource(fruit.get(position).imgno);
-        if(convertView==null)
-            convertView=new GridItem(context);
-        ((GridItem)convertView).setData(fruit.get(position));
+
+        if (convertView == null)
+            convertView = new GridItem(context);
+        ((GridItem) convertView).setData(fruit.get(position));
+
+        final TextView tp = (TextView)convertView.findViewById(R.id.price1);
+        if(check==0)
+            tp.setVisibility(View.INVISIBLE);
+
+        else
+            tp.setVisibility(View.VISIBLE);
+
         return convertView;
     }
+    public void Checkprice() {
+        if(check==0)
+            check=1;
+        else
+            check=0;
+        return ;
+    }
+
 }

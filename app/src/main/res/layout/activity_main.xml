@@ -7,26 +7,17 @@
     android:orientation="vertical"
     tools:context="com.example.jisung.mobapp_09.MainActivity">
 
-    <AutoCompleteTextView
-        android:id="@+id/autoCompleteTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AutoCompleteTextView" />
-
-    <MultiAutoCompleteTextView
-        android:id="@+id/multiAutoCompleteTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MultiAutoCompleteTextView" />
 
 <Button
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/b1"
+    android:text="실습"
     android:onClick="onClick"/>
 
     <Button
-        android:layout_width="wrap_content"
+        android:text="과제"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/b2"
         android:onClick="onClick"/>

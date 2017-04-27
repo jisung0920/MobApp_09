@@ -5,11 +5,16 @@ package com.example.jisung.mobapp_09;
  */
 
 public class Fruit {
+    final static String[] fruit={"아보카도","수박","키위","바나나","체리","크랜베리"};
+    final static int[] image={R.drawable.abocado,R.drawable.watermelon,R.drawable.kiwi,R.drawable.banana,R.drawable.cherry,R.drawable.cranberry};;
+
     String name;
+    String price;
     int imgno;
 
-    public Fruit(String name, int imgno) {
+    public Fruit(String name,String price, int imgno) {
         this.name = name;
+        this.price=price;
         this.imgno = imgno;
     }
 

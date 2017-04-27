@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 public class GridItem extends LinearLayout {
     TextView tv;
+    TextView price;
     ImageView img;
 
     public GridItem(Context context) {
@@ -22,15 +23,15 @@ public class GridItem extends LinearLayout {
         init(context);
     }
 
-
-
     public void init(Context context){
-         LayoutInflater.from(context).inflate(R.layout.griditem,this);
+        LayoutInflater.from(context).inflate(R.layout.griditem,this);
         tv = (TextView)findViewById(R.id.tv1);
+        price = (TextView)findViewById(R.id.price1);
         img = (ImageView)findViewById(R.id.img1);
     }
     public void setData(Fruit one){
         tv.setText(one.name);
+        price.setText(one.price);
         img.setImageResource(one.imgno);
     }
 
