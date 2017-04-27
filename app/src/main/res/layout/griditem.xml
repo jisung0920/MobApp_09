@@ -19,7 +19,7 @@
         android:layout_height="wrap_content" />
 
 
-    <ImageButton
+    <ImageView
 
         android:id="@+id/img1"
         android:layout_width="150dp"
